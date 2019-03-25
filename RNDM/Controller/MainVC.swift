@@ -43,11 +43,22 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setListener()
+        
+        handler = Auth.auth().addStateDidChangeListener({ (auth, user) in
+            if user == nil {
+               let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let loginVC = storyboard.instantiateViewController(withIdentifier: "loginVC")
+                self.present(loginVC, animated: true, completion: nil)
+            }else {
+                self.setListener()
+            }
+        })
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        thoughtsListener.remove()
+        if thoughtsListener != nil {
+            thoughtsListener.remove()
+        }
     }
     
     @IBAction func categoryChanged(_ sender: Any) {
@@ -66,6 +77,19 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         setListener()
         
     }
+    
+    
+    @IBAction func logoutTapped(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        do{
+            try firebaseAuth.signOut()
+        }catch let signoutError as NSError {
+            debugPrint("Error signing out: \(signoutError)")
+        }
+        
+    }
+    
+    
     
     func setListener(){
         if selectedCategory == ThoughtCategory.popular.rawValue {
@@ -112,6 +136,22 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toComments", sender: thoughts[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toComments" {
+            if let destinationVC = segue.destination as? CommentsVC {
+                if let thought = sender as? Thought {
+                    destinationVC.thought = thought
+                }
+            }
+        }
+    }
+    
     
 }
 

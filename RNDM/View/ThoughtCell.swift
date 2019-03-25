@@ -16,6 +16,7 @@ class ThoughtCell: UITableViewCell {
     @IBOutlet weak var thoughtTxtLbl: UILabel!
     @IBOutlet weak var likesimg: UIImageView!
     @IBOutlet weak var likesNumLbl: UILabel!
+    @IBOutlet weak var commentsNumLbl: UILabel!
     
     //Variables
     private var though: Thought!
@@ -42,7 +43,7 @@ override func awakeFromNib() {
         usernameLbl.text = thought.username
         thoughtTxtLbl.text = thought.thoughtTxt
         likesNumLbl.text = String(thought.numLikes)
-        
+        commentsNumLbl.text = String(thought.numComments)
         
         //Date Formater
         let formatter = DateFormatter()
@@ -50,7 +51,5 @@ override func awakeFromNib() {
         let timestamp = formatter.string(from: thought.timestamp)
         timestampLbl.text = timestamp
     }
-    
-    
    
 }
