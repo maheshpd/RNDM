@@ -18,6 +18,7 @@
 		65461A94223D086E00955702 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65461A93223D086E00955702 /* Constants.swift */; };
 		65461A96223D1C3000955702 /* Thought.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65461A95223D1C3000955702 /* Thought.swift */; };
 		65461A98223D1E3400955702 /* ThoughtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65461A97223D1E3400955702 /* ThoughtCell.swift */; };
+		65468280224E0140002CED3E /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6546827F224E013F002CED3E /* KeyboardBoundView.swift */; };
 		654B5BD92242104A000AA3EF /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654B5BD82242104A000AA3EF /* LoginVC.swift */; };
 		654B5BDB22421382000AA3EF /* CreateUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654B5BDA22421382000AA3EF /* CreateUserVC.swift */; };
 		65CE00AB2248A44500EE6EBB /* CommentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CE00AA2248A44500EE6EBB /* CommentsVC.swift */; };
@@ -40,6 +41,7 @@
 		65461A93223D086E00955702 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		65461A95223D1C3000955702 /* Thought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thought.swift; sourceTree = "<group>"; };
 		65461A97223D1E3400955702 /* ThoughtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtCell.swift; sourceTree = "<group>"; };
+		6546827F224E013F002CED3E /* KeyboardBoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 		654B5BD82242104A000AA3EF /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		654B5BDA22421382000AA3EF /* CreateUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserVC.swift; sourceTree = "<group>"; };
 		65CE00AA2248A44500EE6EBB /* CommentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsVC.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				65461A93223D086E00955702 /* Constants.swift */,
+				6546827F224E013F002CED3E /* KeyboardBoundView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			files = (
 				65461A8E223CED3900955702 /* AddThoughtVC.swift in Sources */,
 				654B5BDB22421382000AA3EF /* CreateUserVC.swift in Sources */,
+				65468280224E0140002CED3E /* KeyboardBoundView.swift in Sources */,
 				65461A96223D1C3000955702 /* Thought.swift in Sources */,
 				654B5BD92242104A000AA3EF /* LoginVC.swift in Sources */,
 				65461A7C223CDC2D00955702 /* MainVC.swift in Sources */,

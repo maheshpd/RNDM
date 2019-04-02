@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ril-fg-Pcq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ril-fg-Pcq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -95,17 +95,22 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image=" optionsImageDark" translatesAutoresizingMaskIntoConstraints="NO" id="pJh-XB-1Zc">
+                                                    <rect key="frame" x="331" y="8" width="30" height="30"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="rNN-qc-RS0" firstAttribute="leading" secondItem="07g-vy-jNe" secondAttribute="leadingMargin" id="2Os-vF-Thh"/>
                                                 <constraint firstItem="g3D-nl-tq3" firstAttribute="leading" secondItem="07g-vy-jNe" secondAttribute="leading" constant="16" id="39m-Tp-hCy"/>
                                                 <constraint firstItem="rNN-qc-RS0" firstAttribute="top" secondItem="LhE-CJ-pj6" secondAttribute="bottom" constant="8" id="3VH-fe-4Aw"/>
                                                 <constraint firstItem="LhE-CJ-pj6" firstAttribute="top" secondItem="07g-vy-jNe" secondAttribute="topMargin" id="6zW-87-LlS"/>
+                                                <constraint firstItem="pJh-XB-1Zc" firstAttribute="centerY" secondItem="ENT-Kp-VBa" secondAttribute="centerY" id="7QH-a6-dMz"/>
                                                 <constraint firstItem="ENT-Kp-VBa" firstAttribute="centerY" secondItem="LhE-CJ-pj6" secondAttribute="centerY" id="7pB-mk-L2U"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="rNN-qc-RS0" secondAttribute="trailing" id="Dth-ye-AAW"/>
                                                 <constraint firstAttribute="bottom" secondItem="g3D-nl-tq3" secondAttribute="bottom" constant="0.5" id="ddW-vc-OlY"/>
                                                 <constraint firstItem="LhE-CJ-pj6" firstAttribute="leading" secondItem="07g-vy-jNe" secondAttribute="leadingMargin" id="fNY-bg-V2L"/>
                                                 <constraint firstItem="ENT-Kp-VBa" firstAttribute="leading" secondItem="LhE-CJ-pj6" secondAttribute="trailing" constant="8" id="ixJ-6Z-RCb"/>
+                                                <constraint firstAttribute="trailing" secondItem="pJh-XB-1Zc" secondAttribute="trailing" constant="14" id="sk4-nj-cwX"/>
                                                 <constraint firstItem="g3D-nl-tq3" firstAttribute="top" secondItem="rNN-qc-RS0" secondAttribute="bottom" constant="4" id="xjO-bp-VAu"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -114,6 +119,7 @@
                                             <outlet property="commentsNumLbl" destination="Ab1-1n-UdT" id="iL0-eF-Q8J"/>
                                             <outlet property="likesNumLbl" destination="9Lo-ON-h1i" id="Sb7-PO-FIp"/>
                                             <outlet property="likesimg" destination="RwT-Il-hlJ" id="QTc-da-SwK"/>
+                                            <outlet property="optionsMenu" destination="pJh-XB-1Zc" id="gpr-Oe-AVa"/>
                                             <outlet property="thoughtTxtLbl" destination="rNN-qc-RS0" id="QoO-h0-Q5p"/>
                                             <outlet property="timestampLbl" destination="ENT-Kp-VBa" id="bWg-K6-Beq"/>
                                             <outlet property="usernameLbl" destination="LhE-CJ-pj6" id="DzX-RU-J95"/>
@@ -194,6 +200,9 @@
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image=" optionsImageDark" translatesAutoresizingMaskIntoConstraints="NO" id="qmn-rq-kbF">
+                                                    <rect key="frame" x="319" y="16" width="30" height="30"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="FTY-7b-b7o" secondAttribute="bottom" constant="7" id="09V-Je-xTQ"/>
@@ -201,6 +210,8 @@
                                                 <constraint firstItem="NBo-63-paD" firstAttribute="centerY" secondItem="6ri-A1-rl4" secondAttribute="centerY" id="BxQ-rO-750"/>
                                                 <constraint firstItem="FTY-7b-b7o" firstAttribute="leading" secondItem="bLh-Wf-bzd" secondAttribute="leadingMargin" id="F3B-k0-NTn"/>
                                                 <constraint firstItem="6ri-A1-rl4" firstAttribute="top" secondItem="bLh-Wf-bzd" secondAttribute="topMargin" constant="8" id="OFh-Zy-uQ7"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qmn-rq-kbF" secondAttribute="trailing" constant="11" id="Tf9-f6-Enj"/>
+                                                <constraint firstItem="qmn-rq-kbF" firstAttribute="centerY" secondItem="NBo-63-paD" secondAttribute="centerY" id="bBe-Kx-sxp"/>
                                                 <constraint firstItem="FTY-7b-b7o" firstAttribute="top" secondItem="6ri-A1-rl4" secondAttribute="bottom" constant="10.5" id="cE6-7F-rIZ"/>
                                                 <constraint firstItem="6ri-A1-rl4" firstAttribute="leading" secondItem="bLh-Wf-bzd" secondAttribute="leadingMargin" id="gjj-Vn-AiM"/>
                                                 <constraint firstItem="NBo-63-paD" firstAttribute="leading" secondItem="6ri-A1-rl4" secondAttribute="trailing" constant="8" id="tqF-Rl-F6E"/>
@@ -208,6 +219,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="commentTxt" destination="FTY-7b-b7o" id="fbq-PT-vbK"/>
+                                            <outlet property="optionsMenu" destination="qmn-rq-kbF" id="xPo-Ge-br5"/>
                                             <outlet property="timestampTxt" destination="NBo-63-paD" id="BI3-7H-TAd"/>
                                             <outlet property="usernameTxt" destination="6ri-A1-rl4" id="GM7-bf-XGW"/>
                                         </connections>
@@ -569,6 +581,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name=" optionsImageDark" width="30" height="30"/>
         <image name="addThoughtIcon" width="21" height="24"/>
         <image name="commentIcon" width="26" height="22"/>
         <image name="starIconFilled" width="20" height="19"/>
