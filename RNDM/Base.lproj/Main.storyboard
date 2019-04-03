@@ -96,7 +96,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image=" optionsImageDark" translatesAutoresizingMaskIntoConstraints="NO" id="pJh-XB-1Zc">
-                                                    <rect key="frame" x="331" y="8" width="30" height="30"/>
+                                                    <rect key="frame" x="345" y="15" width="16" height="16"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -201,7 +201,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image=" optionsImageDark" translatesAutoresizingMaskIntoConstraints="NO" id="qmn-rq-kbF">
-                                                    <rect key="frame" x="319" y="16" width="30" height="30"/>
+                                                    <rect key="frame" x="333" y="23" width="16" height="16"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -300,14 +300,8 @@
                                     <action selector="categoryChanged:" destination="wFd-5I-Ph5" eventType="valueChanged" id="v24-R6-G06"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="68q-Xz-hIs">
-                                <rect key="frame" x="20" y="124" width="335" height="20"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uJF-cy-KBa">
-                                <rect key="frame" x="20" y="156" width="335" height="100"/>
+                                <rect key="frame" x="20" y="128" width="335" height="100"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.14684198943661972" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="FCy-9Z-eb6"/>
@@ -317,7 +311,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nR-lw-fPt">
-                                <rect key="frame" x="147.5" y="271" width="80" height="35"/>
+                                <rect key="frame" x="147.5" y="243" width="80" height="35"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.71372549019999998" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="PJh-w2-jzs"/>
@@ -335,11 +329,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="etO-QG-vdd" firstAttribute="trailing" secondItem="uJF-cy-KBa" secondAttribute="trailing" constant="20" id="0Un-rE-yL4"/>
-                            <constraint firstItem="68q-Xz-hIs" firstAttribute="top" secondItem="amR-ee-p7X" secondAttribute="bottom" constant="12" id="2DO-Nz-BMM"/>
-                            <constraint firstItem="68q-Xz-hIs" firstAttribute="leading" secondItem="etO-QG-vdd" secondAttribute="leading" constant="20" id="FO6-gb-Env"/>
                             <constraint firstItem="etO-QG-vdd" firstAttribute="trailing" secondItem="amR-ee-p7X" secondAttribute="trailing" constant="20" id="GLc-ax-Ibr"/>
-                            <constraint firstItem="etO-QG-vdd" firstAttribute="trailing" secondItem="68q-Xz-hIs" secondAttribute="trailing" constant="20" id="JPN-cD-czd"/>
-                            <constraint firstItem="uJF-cy-KBa" firstAttribute="top" secondItem="68q-Xz-hIs" secondAttribute="bottom" constant="12" id="OFP-cG-5tC"/>
+                            <constraint firstItem="uJF-cy-KBa" firstAttribute="top" secondItem="amR-ee-p7X" secondAttribute="bottom" constant="16" id="UD2-FO-WG3"/>
                             <constraint firstItem="amR-ee-p7X" firstAttribute="leading" secondItem="etO-QG-vdd" secondAttribute="leading" constant="20" id="cZi-dr-rGH"/>
                             <constraint firstItem="3nR-lw-fPt" firstAttribute="centerX" secondItem="csD-Gv-fFs" secondAttribute="centerX" id="gqg-ej-gJ4"/>
                             <constraint firstItem="3nR-lw-fPt" firstAttribute="top" secondItem="uJF-cy-KBa" secondAttribute="bottom" constant="15" id="h5x-hU-t1t"/>
@@ -352,7 +343,6 @@
                         <outlet property="categorySegment" destination="amR-ee-p7X" id="Hl6-4h-dzU"/>
                         <outlet property="postBtn" destination="3nR-lw-fPt" id="cq9-pb-rdW"/>
                         <outlet property="thoughtTxt" destination="uJF-cy-KBa" id="FAy-L5-tpJ"/>
-                        <outlet property="userNameTxt" destination="68q-Xz-hIs" id="5rw-2I-k0l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnB-1x-m3i" userLabel="First Responder" sceneMemberID="firstResponder"/>

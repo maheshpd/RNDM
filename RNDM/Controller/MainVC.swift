@@ -16,12 +16,7 @@ enum ThoughtCategory : String  {
 }
 
 class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, ThoughtDelegate {
-    func thoughtOptionTapped(thought: Thought) {
-        // This is where we create the alert to handle the deletion.
-        print(thought.username)
-    }
     
-
     //Outlets
     
     @IBOutlet private weak var segmentControl: UISegmentedControl!
@@ -60,6 +55,27 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, Thou
         })
     }
     
+    func thoughtOptionTapped(thought: Thought) {
+       let alert = UIAlertController(title: "Delete", message: "Do you want to delete your thought?", preferredStyle: .actionSheet)
+        
+        let deleteAction = UIAlertAction(title: "Delete Thought", style: .default) { (action) in
+            //delete thought
+            Firestore.firestore().collection(THOUGHTS_REF).document(thought.documentId)
+                .delete(completion: { (error) in
+                    if let error = error {
+                        debugPrint("Could not delete thought: \(error.localizedDescription)")
+                    }else {
+                        alert.dismiss(animated: true, completion: nil)
+                    }
+                })
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(deleteAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         if thoughtsListener != nil {
             thoughtsListener.remove()
@@ -93,9 +109,6 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, Thou
         }
         
     }
-    
-    
-    
     func setListener(){
         if selectedCategory == ThoughtCategory.popular.rawValue {
             thoughtsListener = thoughtsCollectionRef
